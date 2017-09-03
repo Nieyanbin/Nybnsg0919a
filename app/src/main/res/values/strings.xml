@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Nybnsg</string>
+    <string-array name="spingarr">
+        <item>宝贝</item>
+        <item>店铺</item>
+    </string-array>
+</resources>
