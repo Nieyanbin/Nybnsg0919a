@@ -10,8 +10,10 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.example.dell.nybnsg.R;
+import com.example.dell.nybnsg.activity.ErweimaActivity;
 import com.example.dell.nybnsg.activity.SousuoActivity;
 import com.example.dell.nybnsg.bean.Basebean;
 import com.example.dell.nybnsg.bean.Loginbean;
@@ -34,6 +36,14 @@ public class Fragment1 extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         v = x.view().inject(this,inflater,container);
         Button btnss=v.findViewById(R.id.btnss);
+        ImageView imgsys=v.findViewById(R.id.imgsys);
+        imgsys.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent in=new Intent(getActivity(), ErweimaActivity.class);
+                startActivity(in);
+            }
+        });
 
         btnss.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +51,7 @@ public class Fragment1 extends Fragment{
 //                Animation animation = AnimationUtils.loadAnimation(getActivity(), R.anim.pingyi);
 //                v.startAnimation(animation);
                 startActivity(new Intent(getActivity(), SousuoActivity.class));
+                getActivity().overridePendingTransition(R.anim.pingyi,R.anim.pingyichu);
 
             }
 

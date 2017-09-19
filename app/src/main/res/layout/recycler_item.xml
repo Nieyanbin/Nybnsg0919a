@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+android:id="@+id/lldianji"
+    android:layout_height="100dp">
+<ImageView
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/imgrecycler"
+    android:src="@android:mipmap/sym_def_app_icon"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llrecycler"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvrecyclername"
+            android:text="聂雁宾"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvmoney"
+            android:layout_marginTop="10dp"
+            android:textColor="#ff0000"
+            android:text="聂雁宾"
+            />
+    </LinearLayout>
+</LinearLayout>

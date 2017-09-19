@@ -1,58 +1,59 @@
 package com.example.dell.nybnsg.bean;
 
+import org.greenrobot.greendao.annotation.Entity;
+import org.greenrobot.greendao.annotation.Generated;
+import org.greenrobot.greendao.annotation.Id;
+import org.greenrobot.greendao.annotation.Property;
+import org.xutils.db.annotation.Column;
+import org.xutils.db.annotation.Table;
+
 /**
- * Created by dell on 2017/8/31.
+ * Created by dell on 2017/9/6.
  */
-public class Registerbean extends Basebean{
+public class Registerbean {
+    public int id;
+      public String zhanghao;
+    public String pwd;
+    public String zcpwd;
+    public String email;
 
-    /**
-     * code : 200
-     * datas : {"username":"andro","userid":"8","key":"ce30718ab0d11dac3036b959350d4d53"}
-     */
-
-    private DatasBean datas;
-
-    public DatasBean getDatas() {
-        return datas;
+    public int getId() {
+        return id;
     }
 
-    public void setDatas(DatasBean datas) {
-        this.datas = datas;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public static class DatasBean {
-        /**
-         * username : andro
-         * userid : 8
-         * key : ce30718ab0d11dac3036b959350d4d53
-         */
+    public String getZhanghao() {
+        return zhanghao;
+    }
 
-        private String username;
-        private String userid;
-        private String key;
+    public void setZhanghao(String zhanghao) {
+        this.zhanghao = zhanghao;
+    }
 
-        public String getUsername() {
-            return username;
-        }
+    public String getPwd() {
+        return pwd;
+    }
 
-        public void setUsername(String username) {
-            this.username = username;
-        }
+    public void setPwd(String pwd) {
+        this.pwd = pwd;
+    }
 
-        public String getUserid() {
-            return userid;
-        }
+    public String getZcpwd() {
+        return zcpwd;
+    }
 
-        public void setUserid(String userid) {
-            this.userid = userid;
-        }
+    public void setZcpwd(String zcpwd) {
+        this.zcpwd = zcpwd;
+    }
 
-        public String getKey() {
-            return key;
-        }
+    public String getEmail() {
+        return email;
+    }
 
-        public void setKey(String key) {
-            this.key = key;
-        }
+    public void setEmail(String email) {
+        this.email = email;
     }
 }

@@ -39,22 +39,16 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:id="@+id/lll"
-        android:gravity="center"
+        android:layout_gravity="center"
         >
         <ListView
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:id="@+id/lv"
-
             />
-        <ExpandableListView
-            android:id="@+id/expandableListView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:cacheColorHint="#00000000"
-            android:divider="#ebebeb"
-            android:dividerHeight="1dp"
-            android:footerDividersEnabled="false"
-            android:groupIndicator="@null" />
+        <android.support.v4.view.ViewPager
+            android:id="@+id/twovp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
     </LinearLayout>
 </LinearLayout>

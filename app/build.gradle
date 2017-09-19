@@ -1,8 +1,14 @@
 apply plugin: 'com.android.application'
-
+apply plugin: 'org.greenrobot.greendao' // apply plugin
 android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
+    greendao {
+        schemaVersion 1
+
+        daoPackage 'com.koma.greendao.gen'
+        targetGenDir 'src/main/java'
+    }
 
     defaultConfig {
         applicationId "com.example.dell.nybnsg"
@@ -29,4 +35,10 @@ dependencies {
     compile 'com.hjm:BottomTabBar:1.0.0'
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     compile 'com.github.bumptech.glide:glide:4.0.0'
+    compile 'com.android.support:support-v4:26.0.0-alpha1'
+    compile 'com.android.support:recyclerview-v7:26.0.0-alpha1'
+    compile 'com.youth.banner:banner:1.4.9'
+    compile 'org.greenrobot:greendao:3.2.2'
+    // add library
+    compile 'cn.yipianfengye.android:zxing-library:2.1'
 }

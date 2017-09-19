@@ -39,7 +39,7 @@ private BottomTabBar btn;
         initbtn();
         Httputils.httputils(Main2Activity.this).get("http://169.254.41.208/mobile/index.php?act=goods_class", Loginbean.class, new NetListnter() {
             @Override
-            public void onSuccess(Basebean basebean) {
+            public void onSuccess(Object basebean) {
                 Loginbean loginbean= (Loginbean) basebean;
             }
         });
@@ -51,7 +51,7 @@ private BottomTabBar btn;
         params.put("client","android");
         Httputils.httputils(Main2Activity.this).post("http://169.254.133.48/mobile/index.php?act=login&op=register", params,Registerbean.class, new NetListnter() {
             @Override
-            public void onSuccess(Basebean basebean) {
+            public void onSuccess(Object basebean) {
                 Registerbean registerbean= (Registerbean) basebean;
             }
         });

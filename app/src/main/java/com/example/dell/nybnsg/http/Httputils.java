@@ -119,35 +119,36 @@ postfb.build().execute(new StringCallback() {
      * @param clzz
      * @param netListnter
      */
-    public void get(int gc_id, final Class clzz, final NetListnter netListnter){
-          StringBuffer sb=new StringBuffer();
-        sb.append("http://169.254.41.208/mobile/index.php?act=goods_class");
-        sb.append("&");
-        sb.append("gc_id=");
-        sb.append(gc_id);
-        Log.e("asasadasda","asdadadadadada"+sb.toString());
-       OkHttpUtils.get().url(sb.toString()).build().execute(new StringCallback() {
-           @Override
-           public void onError(Request request, Exception e) {
-
-           }
-
-           @Override
-           public void onResponse(String response) {
-               Basebean bean = gson.fromJson(response, Basebean.class);
-               String code = bean.getCode();
-               if(code.equals("400")){
-                   AlertDialog.Builder ab=new AlertDialog.Builder(context);
-                   ab.setTitle("标题");
-                   ab.setMessage("网络错误，请重新加载");
-               }else if(code.equals("200")){
-                   if(netListnter!=null){
-                       Basebean basebean = (Basebean) gson.fromJson(response, clzz);
-                       netListnter.onSuccess(basebean);
-                   }
-               }
-           }
-       });
-
-    }
+//    public void get(String gc_id, final Class clzz, final NetListnter netListnter){
+////        StringBuffer sb=new StringBuffer();
+//        String url="http://169.254.41.208/mobile/index.php?act=goods_class";
+//        sb.append(url);
+//        sb.append("&");
+//        sb.append("gc_id=");
+//        sb.append(gc_id);
+//        Log.e("asasadasda","asdadadadadada"+sb.toString());
+//       OkHttpUtils.get().url(sb.toString()).build().execute(new StringCallback() {
+//           @Override
+//           public void onError(Request request, Exception e) {
+//
+//           }
+//
+//           @Override
+//           public void onResponse(String response) {
+//               Basebean bean = gson.fromJson(response, Basebean.class);
+//               String code = bean.getCode();
+//               if(code.equals("400")){
+//                   AlertDialog.Builder ab=new AlertDialog.Builder(context);
+//                   ab.setTitle("标题");
+//                   ab.setMessage("网络错误，请重新加载");
+//               }else if(code.equals("200")){
+//                   if(netListnter!=null){
+//                       Basebean basebean = (Basebean) gson.fromJson(response, clzz);
+//                       netListnter.onSuccess(basebean);
+//                   }
+//               }
+//           }
+//       });
+//
+//    }
 }
